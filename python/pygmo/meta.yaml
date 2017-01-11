@@ -1,12 +1,19 @@
 package:
   name: pygmo
-  version: 1.1.5
+  version: 1.1.7
 
 source:
   git_url: git@github.com:esa/pagmo.git
-  git_tag: 1.1.5
-  patches:
-    - cmath.patch
+  git_tag: 1.1.7
+# Or if git account does not have access rights to pagmo.git,
+# download the tarball from https://github.com/esa/pagmo/releases,
+# expand it to the local conda package build directory 
+# and replace git_url and git_tag above with the following line    
+#  path: ./pagmo-1.1.7
+#
+# All issues originally patched in pagmo 1.1.5 have been incorp. in 1.1.7
+#  patches:
+#    - cmath.patch
 
 requirements:
   build:
